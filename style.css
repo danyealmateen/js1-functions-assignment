@@ -1,3 +1,7 @@
 body {
-    background-color:rgb(1, 99, 17);
+  background-color: rgb(1, 99, 17);
+}
+li {
+  display: flex;
+  flex-direction: column;
 }
