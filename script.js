@@ -132,24 +132,43 @@
 //b:Funktionen ska skapa lika många kvadrater som amount med bakgrundsfärgen color.
 //c:Kvadraterna ska ligga bredvid varandra i en rad.
 //d:Glöm inte att lägga till en margin eller border så att man kan urskilja varje kvadrat.
-function kvadrat() {
-  let createDiv = document.createElement("div");
-  createDiv.style.display = "flex";
-  createDiv.style.margin = "50px";
-  createDiv.style.width = "100px";
-  createDiv.style.height = "100px";
-  createDiv.style.backgroundColor = "orange";
-  createDiv.style.border = "5px solid red";
-  const parentDiv = document.getElementById("parentDiv");
-  parentDiv.appendChild(createDiv);
-}
+// function kvadrat() {
+//   let createDiv = document.createElement("div");
+//   createDiv.style.margin = "50px";
+//   createDiv.style.width = "100px";
+//   createDiv.style.height = "100px";
+//   createDiv.style.backgroundColor = "orange";
+//   createDiv.style.border = "5px solid red";
+//   const parentDiv = document.getElementById("parentDiv");
+//   parentDiv.appendChild(createDiv);
+// }
 
-function parentContainer() {
-  let parentDiv = document.createElement("div");
-  parentDiv.setAttribute("id", "parentDiv");
-  parentDiv.style.backgroundColor = "yellow";
-  parentDiv.style.width = "100%";
-  document.body.appendChild(parentDiv);
+// function parentContainer() {
+//   let parentDiv = document.createElement("div");
+//   parentDiv.setAttribute("id", "parentDiv");
+//   parentDiv.style.display = "flex";
+//   parentDiv.style.backgroundColor = "yellow";
+//   parentDiv.style.width = "100%";
+//   document.body.appendChild(parentDiv);
+// }
+// parentContainer();
+// kvadrat();
+// kvadrat();
+
+function theList(ols, lis) {
+  let singleDiv = document.createElement("div");
+
+  for (let i = 0; i < lis; i++) {
+    let li = document.createElement("li");
+    singleDiv.appendChild(li);
+    console.log(li);
+  }
+  for (let i = 0; i < ols; i++) {
+    let ol = document.createElement("ol");
+    singleDiv.appendChild(ol);
+    document.body.appendChild(ol);
+    console.log(ol);
+  }
+  console.log(singleDiv);
 }
-parentContainer();
-kvadrat();
+theList(3, 3);
